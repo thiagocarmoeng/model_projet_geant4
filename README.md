@@ -128,4 +128,3 @@ https://geant4.web.cern.ch/
 Guia para Usuários do Geant4 (Application Developers Guide):
 https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/
 
-# model_projet_geant4
