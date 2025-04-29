@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rodar com Macro Automático",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/MeuProjetoGeant4",
+            "args": [
+                "macros/init_vis.mac"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake Build"
+        }
+    ]
+}

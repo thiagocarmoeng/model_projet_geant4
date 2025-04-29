@@ -1,0 +1,42 @@
+# Inicializa a geometria e física
+/run/initialize
+
+# Abre o visualizador OpenGL em modo Imediato + Qt
+/vis/open OGLIQt
+
+# Cria e configura a cena
+/vis/scene/create
+/vis/sceneHandler/attach
+
+# Adiciona os volumes
+/vis/scene/add/volume
+
+# Mostra os volumes como Wireframe
+/vis/geometry/set/forceWireframe true
+
+# Adiciona eixos no centro
+/vis/scene/add/axes 0 0 0 25 cm
+
+# Cria o estilo de trajetória por carga
+/vis/modeling/trajectories/create/drawByCharge
+
+# Adiciona as trajetórias corretamente (plural)
+/vis/scene/add/trajectories
+
+# Configura para acumular eventos
+/vis/scene/endOfEventAction accumulate
+/vis/enable
+
+# Ajusta a câmera
+/vis/viewer/set/viewpointThetaPhi 70 20
+/vis/viewer/zoom 1.5
+/vis/viewer/flush
+
+# Define a fonte de partículas (gun)
+/gun/particle e-
+/gun/energy 10 MeV
+/gun/position 0 0 -10 cm
+/gun/direction 0 0 1
+
+# Dispara 10 eventos
+/run/beamOn 10
