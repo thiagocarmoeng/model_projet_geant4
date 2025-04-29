@@ -1,0 +1,11 @@
+# Ignorar pasta de build
+/build/
+
+# Ignorar arquivos de saída da simulação
+/app/output/
+
+# Ignorar arquivos temporários de sistema
+*.swp
+*.swo
+*.tmp
+.DS_Store
