@@ -7,27 +7,28 @@ Copiar
 Editar
 MeuProjetoGeant4/
 ├── app/
-│   ├── output/
-│   │   ├── output.csv       # Arquivo de saída CSV
-│   │   └── output.txt       # Arquivo de saída TXT
-│   └── main.cc              # Código principal
-├── build/                   # Pasta de build gerada pelo CMake
+│   ├── main.cc                  # Arquivo principal da aplicação
+│   └── output/                  # Pasta de saída dos resultados (gerada em tempo de execução)
+│       ├── output.csv           # Resultados da simulação em formato CSV
+│       └── output.txt           # Resultados da simulação em formato de texto (TXT)
+├── build/                       # Diretório de build gerado automaticamente pelo CMake (não versionado)
 ├── include/
-│   ├── construction/        # Headers da construção da geometria
-│   │   └── DetectorConstruction.hh
-│   ├── generation/          # Headers do gerador primário
-│   │   └── PrimaryGeneratorAction.hh
-│   └── EventAction.hh        # Header da ação de evento
+│   ├── construction/
+│   │   └── DetectorConstruction.hh   # Definições da construção da geometria
+│   ├── generation/
+│   │   └── PrimaryGeneratorAction.hh # Definições da geração primária de partículas
+│   └── EventAction.hh                # Definições da ação de eventos
 ├── macros/
-│   └── interactive.mac       # Arquivo de macro para execução automática
+│   └── interactive.mac          # Script de macro para inicialização automática da simulação
 ├── src/
-│   ├── construction/        # Implementação da geometria
-│   │   └── DetectorConstruction.cc
-│   ├── generation/          # Implementação do gerador primário
-│   │   └── PrimaryGeneratorAction.cc
-│   └── EventAction.cc        # Implementação da ação de evento
-├── CMakeLists.txt            # Script de compilação
-└── README.md                 # Este guia
+│   ├── construction/
+│   │   └── DetectorConstruction.cc   # Implementação da construção da geometria
+│   ├── generation/
+│   │   └── PrimaryGeneratorAction.cc # Implementação da geração primária
+│   └── EventAction.cc                # Implementação da ação de eventos
+├── CMakeLists.txt                # Script de configuração do projeto (compilação via CMake)
+└── README.md                     # Documentação e instruções do projeto
+
 
 🚀 Como Compilar
 Abra o terminal e entre na raiz do projeto:
